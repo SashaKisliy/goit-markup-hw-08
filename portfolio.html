@@ -12,13 +12,12 @@
     <title>Document</title>
 </head>
 <body>
-    <!--Верхняя линия-->
     <header class="header">
         <div class="container main-header">
             <nav class="navigation">
             <a class="logo link" href="./index.html"><span class="logo_accent">Web</span>Studio</a>
             <ul class="navigation__list list">
-                <li class="navigation__item"><a href="./index.html" class="navigation__link link ">Студия</a></li>
+                <li class="navigation__item"><a href="./index.html" class="navigation__link link">Студия</a></li>
                 <li class="navigation__item"><a href="./portfolio.html" class="navigation__link link current">Портфолио</a></li>
                 <li class="navigation__item"><a href="./index.html" class="navigation__link link">Контакты</a></li>
             </ul>
@@ -27,17 +26,52 @@
                 <li class="contacts__item"><a href="mailto:info@devstudio.com" class="contacts__link link"><svg class="contacts__icon" width="16" height="12"><use href="./images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a></li>
                 <li class="contacts__item"><a href="tell:+380961111111" class="contacts__link link"><svg class="contacts__icon" width="10" height="16"><use href="./images/icons.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a></li>
             </ul>
+            <button type="button" class="menu-open-button" data-menu-open>
+                <svg class="header-open-menu" width="40" height="40">
+                    <use href="./images/icons.svg#icon-start_menu"></use>
+                </svg>
+            </button> 
+            <div class="mob-menu is-hidden" data-menu>
+                <div class="mob-menu-container">
+                <div class="mob-menu-box">
+                <button type="button" class="menu-close-button" data-menu-close>
+                    <svg class="header-close-menu" width="40" height="40">
+                    <use href="./images/icons.svg#icon-close_menu"></use>
+                </svg>
+                </button>
+                <nav class="mob-navigation">
+                    <ul class="mob-navigation__list list">
+                        <li class="mob-navigation__item"><a href="./index.html" class="mob-navigation__link link">Студия</a></li>
+                        <li class="mob-navigation__item"><a href="./portfolio.html" class="mob-navigation__link link current">Портфолио</a></li>
+                        <li class="mob-navigation__item"><a href="./index.html" class="mob-navigation__link link">Контакты</a></li>
+                    </ul>
+                </nav>
+                </div>
+                <div class="mob-menu-box-2">
+                    <ul class="mob-contacts list">
+                        <li class="mob-contacts__item"><a href="tell:+380961111111" class="mob-tell__link link">+38 096 111 11 11</a></li>
+                        <li class="mob-contacts__item"><a href="mailto:info@devstudio.com" class="mob-mail__link link">info@devstudio.com</a></li>
+                        
+                    </ul>
+                    <ul class="mob-soc-list list">
+                        <li class="mob-soc-item"><a class="mob-soc-link" href="">Instagram</a></li>
+                        <li class="mob-soc-item"><a class="mob-soc-link" href="">Twitter</a></li>
+                        <li class="mob-soc-item"><a class="mob-soc-link" href="">Facebook</a></li>
+                        <li class="mob-soc-item"><a class="mob-soc-link" href="">LinkedIn</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         </header>
     
 
-     <!--Hero-->
     <main>
        <section class="portfolio">
         <div class="container">
         <h1 class="portfolio-title visually-hidden">Наше портфолио</h1>
         <ul class="portfolio-list list">
-            <li class="portfolio-item"><button type="button" class="portfolio-btn">Все</button></li>
+            <li class="portfolio-item "><button type="button" class="portfolio-btn now">Все</button></li>
             <li class="portfolio-item"><button type="button" class="portfolio-btn">Веб-сайты</button></li>
             <li class="portfolio-item"><button type="button" class="portfolio-btn">Приложения</button></li>
             <li class="portfolio-item"><button type="button" class="portfolio-btn">Дизайн</button></li>
@@ -48,7 +82,35 @@
             <li class="project-item">
                 <a class="project-link link" href="">
                     <div class="product-thumb">
-                <img src="./images/img11.jpg" alt="Технокряк" width="370">
+                        <picture>
+                            <source
+                              srcset="
+                                ./images/img11.jpg 1x,
+                                ./images/img11-2x.jpg 2x
+                              "
+                              media="(min-width:1200px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img11-tab.jpg    1x,
+                              ./images/img11-tab-2x.jpg 2x
+                              "
+                              media="(min-width:768px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img11-mob.jpg    1x,
+                              ./images/img11-mob-2x.jpg 2x
+                              "
+                              media="(max-width:767px)"
+                            />
+                            <img
+                              src="./images/img11.jpg"
+                              alt="techo"
+                              width="450"
+                            />
+                          </picture>
+                
                 <div class="product-overlay">
                     <p class="product-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div></div>
@@ -60,8 +122,34 @@
             <li class="project-item">
                 <a class="project-link link" href="">
                 <div class="product-thumb">
-                <img src="./images/img12.jpg" alt="Постер New Orlean vs Golden Star" width="370">
-                
+                    <picture>
+                        <source
+                          srcset="
+                            ./images/img12.jpg 1x,
+                            ./images/img12-2x.jpg 2x
+                          "
+                          media="(min-width:1200px)"
+                        />
+                        <source
+                          srcset="
+                          ./images/img12-tab.jpg    1x,
+                          ./images/img12-tab-2x.jpg 2x
+                          "
+                          media="(min-width:768px)"
+                        />
+                        <source
+                          srcset="
+                          ./images/img12-mob.jpg    1x,
+                          ./images/img12-mob-2x.jpg 2x
+                          "
+                          media="(max-width:767px)"
+                        />
+                        <img
+                          src="./images/img12.jpg"
+                          alt="Orlean"
+                          width="450"
+                        />
+                      </picture>
                 <div class="product-overlay">
                 <p class="product-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                 </div></div>
@@ -73,7 +161,34 @@
             <li class="project-item">
                 <a class="project-link link" href="">
                     <div class="product-thumb">
-                <img src="./images/img13.jpg" alt="Ресторан Seafood" width="370">
+                        <picture>
+                            <source
+                              srcset="
+                                ./images/img13.jpg 1x,
+                                ./images/img13-2x.jpg 2x
+                              "
+                              media="(min-width:1200px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img13-tab.jpg    1x,
+                              ./images/img13-tab-2x.jpg 2x
+                              "
+                              media="(min-width:768px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img13-mob.jpg    1x,
+                              ./images/img13-mob-2x.jpg 2x
+                              "
+                              media="(max-width:767px)"
+                            />
+                            <img
+                              src="./images/img13.jpg"
+                              alt="seafood"
+                              width="450"
+                            />
+                          </picture>
                 <div class="product-overlay">
                     <p class="product-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div></div>
@@ -85,7 +200,34 @@
             <li class="project-item">
                 <a class="project-link link" href="">
                     <div class="product-thumb">
-                <img src="./images/img14.jpg" alt="Проект Prime" width="370">
+                        <picture>
+                            <source
+                              srcset="
+                                ./images/img14.jpg 1x,
+                                ./images/img14-2x.jpg 2x
+                              "
+                              media="(min-width:1200px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img14-tab.jpg    1x,
+                              ./images/img14-tab-2x.jpg 2x
+                              "
+                              media="(min-width:768px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img14-mob.jpg    1x,
+                              ./images/img14-mob-2x.jpg 2x
+                              "
+                              media="(max-width:767px)"
+                            />
+                            <img
+                              src="./images/img14.jpg"
+                              alt="prime"
+                              width="450"
+                            />
+                          </picture>
                 <div class="product-overlay">
                     <p class="product-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div></div>
@@ -97,7 +239,34 @@
             <li class="project-item">
                 <a class="project-link link" href="">
                     <div class="product-thumb">
-                <img src="./images/img15.jpg" alt="Проект Boxes" width="370">
+                        <picture>
+                            <source
+                              srcset="
+                                ./images/img15.jpg 1x,
+                                ./images/img15-2x.jpg 2x
+                              "
+                              media="(min-width:1200px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img15-tab.jpg    1x,
+                              ./images/img15-tab-2x.jpg 2x
+                              "
+                              media="(min-width:768px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img15-mob.jpg    1x,
+                              ./images/img15-mob-2x.jpg 2x
+                              "
+                              media="(max-width:767px)"
+                            />
+                            <img
+                              src="./images/img15.jpg"
+                              alt="boxes"
+                              width="450"
+                            />
+                          </picture>
                 <div class="product-overlay">
                     <p class="product-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div></div>
@@ -109,7 +278,34 @@
             <li class="project-item">
                 <a class="project-link link" href="">
                     <div class="product-thumb">
-                <img src="./images/img16.jpg" alt="Inspiration has no Borders" width="370">
+                        <picture>
+                            <source
+                              srcset="
+                                ./images/img16.jpg 1x,
+                                ./images/img16-2x.jpg 2x
+                              "
+                              media="(min-width:1200px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img16-tab.jpg    1x,
+                              ./images/img16-tab-2x.jpg 2x
+                              "
+                              media="(min-width:768px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img16-mob.jpg    1x,
+                              ./images/img16-mob-2x.jpg 2x
+                              "
+                              media="(max-width:767px)"
+                            />
+                            <img
+                              src="./images/img16.jpg"
+                              alt="borders"
+                              width="450"
+                            />
+                          </picture>
                 <div class="product-overlay">
                     <p class="product-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div></div>
@@ -121,7 +317,34 @@
             <li class="project-item">
                 <a class="project-link link" href="">
                     <div class="product-thumb">
-                <img src="./images/img17.jpg" alt="Издание Limited Edition" width="370">
+                        <picture>
+                            <source
+                              srcset="
+                                ./images/img17.jpg 1x,
+                                ./images/img17-2x.jpg 2x
+                              "
+                              media="(min-width:1200px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img17-tab.jpg    1x,
+                              ./images/img17-tab-2x.jpg 2x
+                              "
+                              media="(min-width:768px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img17-mob.jpg    1x,
+                              ./images/img17-mob-2x.jpg 2x
+                              "
+                              media="(max-width:767px)"
+                            />
+                            <img
+                              src="./images/img17.jpg"
+                              alt="limited"
+                              width="450"
+                            />
+                          </picture>
                 <div class="product-overlay">
                     <p class="product-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div></div>
@@ -133,7 +356,34 @@
             <li class="project-item">
                 <a class="project-link link" href="">
                     <div class="product-thumb">
-                <img src="./images/img18.jpg" alt="Проект LAB" width="370">
+                        <picture>
+                            <source
+                              srcset="
+                                ./images/img18.jpg 1x,
+                                ./images/img18-2x.jpg 2x
+                              "
+                              media="(min-width:1200px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img18-tab.jpg    1x,
+                              ./images/img18-tab-2x.jpg 2x
+                              "
+                              media="(min-width:768px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img18-mob.jpg    1x,
+                              ./images/img18-mob-2x.jpg 2x
+                              "
+                              media="(max-width:767px)"
+                            />
+                            <img
+                              src="./images/img18.jpg"
+                              alt="lab"
+                              width="450"
+                            />
+                          </picture>
                 <div class="product-overlay">
                     <p class="product-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div></div>
@@ -145,7 +395,34 @@
             <li class="project-item">
                 <a class="project-link link" href="">
                     <div class="product-thumb">
-                <img src="./images/img19.jpg" alt="Growing Business" width="370">
+                        <picture>
+                            <source
+                              srcset="
+                                ./images/img19.jpg 1x,
+                                ./images/img19-2x.jpg 2x
+                              "
+                              media="(min-width:1200px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img19-tab.jpg    1x,
+                              ./images/img19-tab-2x.jpg 2x
+                              "
+                              media="(min-width:768px)"
+                            />
+                            <source
+                              srcset="
+                              ./images/img19-mob.jpg    1x,
+                              ./images/img19-mob-2x.jpg 2x
+                              "
+                              media="(max-width:767px)"
+                            />
+                            <img
+                              src="./images/img19.jpg"
+                              alt="business"
+                              width="450"
+                            />
+                          </picture>
                 <div class="product-overlay">
                     <p class="product-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                     </div></div>
@@ -162,7 +439,7 @@
 
     <!--Подвал-->
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-flex">
             <div class="footer-info">
         <a class="footer-logo link" href="./index.html"><span class="logo_accent">Web</span>Studio</a>
         <address class="footer-address">
@@ -205,6 +482,7 @@
         </div>
     </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 
 </body>
 </html>

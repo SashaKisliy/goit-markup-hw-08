@@ -1,6 +1,11 @@
 .examples {
-    padding-top: 94px;
     padding-bottom: 94px;
+
+  
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  
   }
   
   .examples-list {
@@ -31,8 +36,7 @@
   
   .examples-box {
     position: absolute;
-    bottom: 0%;
-    display: inline-block;
+    bottom: 2%;
     align-items: center;
     text-align: center;
     width: 370px;
