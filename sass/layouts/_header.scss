@@ -175,10 +175,13 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
     }
   }
 
+
+  .mob-menu-box {
+    margin-bottom: auto;
+  }
   
 
   .menu-close-button {
